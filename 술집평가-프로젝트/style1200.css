@@ -1,0 +1,414 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Yusei Magic', sans-serif;
+}
+body {
+    position: relative;
+}
+.contain {
+    width: 935px;
+    margin: 0 auto;
+}
+
+
+/* header */
+header {
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid #dbdbdb;
+}
+.header_header {
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+}
+.header_header .header_logo {
+    font-size: 24px;
+    font-family: 'Hachi Maru Pop', cursive;
+}
+.header_header .header_menu {
+    font-size: 14px;
+    display: flex;
+}
+.header_header .header_menu li {
+    padding: 8px 12px;
+    list-style: none;
+    font-family: 'Yusei Magic', sans-serif;
+}
+.header_header .header_menu li:hover {
+    background: #43a047;
+    border-radius: 10px;
+}
+.header_photo {
+    background: rgb(237,237,237);
+}
+header a {
+    color: #000;
+    text-decoration: none;
+}
+.header_header_toggle_btn {
+    display: none;
+    position: absolute;
+    right: 45px;
+    top: 12px;
+    font-size: 22px;
+}
+
+
+
+
+/* nav */
+nav {
+    width: 100%;
+    background: #fafafa;
+}
+nav .contain {
+    border-bottom: 1px solid #dbdbdb;
+}
+.slider1 {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.slider ul {
+    list-style: none;
+    width: calc(100% * 5);
+    display: flex;
+    animation: slides 40s infinite;
+}
+
+.slider ul li {
+    list-style: none;
+    width: calc(100% * 5);
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fafafa;
+    text-align: center;
+}
+.wise-saying {
+    font-family: "Nanum Brush Script", cursive;
+    color: #000;
+    font-size: 36px;
+}
+
+
+
+
+/* section*/
+section {
+    width: 100%;
+    background: #fafafa;
+}
+.section .section-menu {
+    display: flex;
+    justify-content: center;
+}
+.section .section-menu li {
+    list-style: none;
+    padding: 15px 20px;
+}
+.section .section-menu li:active {
+    border-top: 1px solid #000;
+}
+.section .section-menu li a {
+    text-decoration: none;
+    color: black;
+}
+.section-container {
+    display: grid;
+    grid-auto-rows: 293px;
+    grid-template-columns: repeat(3,293px);
+    gap: 28px;
+}
+.section-container .grid-item:nth-child(1){
+    background-image: url("sulzip_image/01.jpg");
+    background-size: 100% 100%;
+}
+.section-container .grid-item:nth-child(2){
+    background: url("sulzip_image/02.jpg");
+    background-size: 100% 100%;
+}
+.section-container .grid-item:nth-child(3){
+    background: url("sulzip_image/03.jpg");
+    background-size: 100% 100%;
+}
+.section-container .grid-item:nth-child(4){
+    background: url("sulzip_image/04.jpg");
+    background-size: 100% 100%;
+}
+.section-container .grid-item:nth-child(5){
+    background: url("sulzip_image/05.jpg");
+    background-size: 100% 100%;
+}
+.section-container .grid-item:nth-child(6){
+    background: url("sulzip_image/06.jpg");
+    background-size: 100% 100%;
+}
+.section-container .grid-item:nth-child(7){
+    background: url("sulzip_image/07.jpg");
+    background-size: 100% 100%;
+}
+.section-container .grid-item:nth-child(8){
+    background: url("sulzip_image/08.jpg");
+    background-size: 100% 100%;
+}
+.section-container .grid-item:nth-child(9){
+    background: url("sulzip_image/09.jpg");
+    background-size: 100% 100%;
+}
+.section-container .grid-item {
+    width: 100%;
+    position: relative;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+}
+/*.section-container .grid-item:hover {*/
+/*    transform: scale(1.05);*/
+/*}*/
+.section-container .grid-item .bg {
+    position: absolute;
+    background-color:rgba(0, 0, 0, 0.25);
+    width: 100%;
+    height: 100%;
+}
+.section-container .grid-item p {
+    font-size: 20px;
+    color: #fff;
+    z-index: 2;
+    position: absolute;
+    bottom: 10px;
+}
+#section-item-food {
+    display: none;
+    z-index: 1;
+    background: tomato;
+    width: 950px;
+    height: 600px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/* footer */
+footer {
+    width: 100%;
+    background: #fafafa;
+}
+.footer {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+.footer div {
+    color: #8e8e8e;
+    padding: 10px 0;
+    font-size: 13px;
+}
+
+
+
+.bg-modal {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+.modal-content {
+    width: 935px;
+    height: 600px;
+    background-color: white;
+    opacity: 1;
+    position: fixed;
+    top: 50%;
+    display: flex;
+    transform: translateY(-50%);
+}
+.modal-slider {
+    width: 64%;
+    height: 100%;
+    position: relative;
+    overflow-x: hidden;
+}
+.cmt {
+    width: 36%;
+}
+.close {
+    position: fixed;
+    top: 0;
+    right: 14px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.left {
+    position: fixed;
+    top: 50%;
+    font-size: 30px;
+    left: 10px;
+    cursor: pointer;
+    transform: translateY(-50%);
+    z-index: 5;
+    display: none;
+    color: #fff;
+}
+.right {
+    position: absolute;
+    top: 50%;
+    font-size: 30px;
+    right: 10px;
+    cursor: pointer;
+    transform: translateY(-50%);
+    z-index: 5;
+    color: #fff;
+}
+.left:hover , .right:hover {
+    color: #43a047;
+}
+.modal-photo {
+    width: 100%;
+    height: 100%;
+    display: none;
+    transition: 0.5s;
+}
+.item1 , .item2 , .item3{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.item1.active , .item2.active , .item3.active{
+    display: block;
+}
+.item1.a {background: url("무지개맥주/4.jpg");background-size: 100% 100%;}
+.item1.b {background: url("무지개맥주/1.jpg");background-size: 100% 100%;}
+.item1.c {background: url("무지개맥주/2.jpg");background-size: 100% 100%;}
+
+.item2.a {background: url("미술관/1.jpg");background-size: 100% 100%;}
+.item2.b {background: url("미술관/2.jpg");background-size: 100% 100%;}
+.item2.c {background: url("미술관/3.jpg");background-size: 100% 100%;}
+
+.item3.a {background: url("귀신닭발/1.jpg");background-size: 100% 100%;}
+.item3.b {background: url("귀신닭발/2.jpg");background-size: 100% 100%;}
+.item3.c {background: url("귀신닭발/3.jpg");background-size: 100% 100%;}
+/* 애니메이션 */
+@keyframes slides {
+    0% {
+        margin-left: 0;
+    } /* 0 ~ 10  : 정지 */
+    10% {
+        margin-left: 0;
+    } /* 10 ~ 25 : 변이 */
+    20% {
+        margin-left: -100%;
+    } /* 25 ~ 35 : 정지 */
+    30% {
+        margin-left: -100%;
+    } /* 35 ~ 50 : 변이 */
+    40% {
+        margin-left: -200%;
+    }
+    50% {
+        margin-left: -200%;
+    }
+    60% {
+        margin-left: -300%;
+    }
+    70% {
+        margin-left: -300%;
+    }
+
+    80% {
+        margin-left: -400%;
+    }
+
+    90% {
+        margin-left: -400%;
+    }
+    100% {
+        margin-left: 0%;
+    }
+}
+
+
+@media screen and (max-width: 1000px){
+    .contain {
+        width: 95vw;
+        margin: 0 auto;
+    }
+    .modal-content {
+        width: 95vw;
+    }
+    .무지개맥주 {
+        width: 100%;
+    }
+}
+/* 768px이하 */
+@media screen and (max-width: 768px) {
+    header .contain {
+        width: 100%;
+    }
+    .header_header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .header_header .header_menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        margin: 0 auto;
+        padding-top: 15px;
+    }
+    .header_header .header_menu.active {
+        display: flex;
+    }
+    .header_header .header_menu li {
+        width: 100%;
+        margin-top: 10px;
+        text-align: center;
+    }
+    nav .contain {
+        width: 100vw;
+    }
+    .slider ul li {
+        padding: 0 30px;
+        height: 300px;
+        font-size: 30px;
+    }
+    .slider1{
+        height: 300px;
+    }
+    .header_header_toggle_btn {
+        display: block;
+    }
+    /* 이부분은 JS로 구현해야할듯 ?
+       클릭시 색상유지
+    */
+    .header_header_toggle_btn:active {
+        color: #43a047;
+    }
+    section .contain {
+        width: 100vw;
+    }
+    .section-container {
+        grid-gap: 4px;
+    }
+    .modal-content {
+        width: 100%;
+    }
+}
